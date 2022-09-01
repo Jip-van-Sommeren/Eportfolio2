@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/d01df4dbd8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jip van Sommeren</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("kvaFNfJwKnJexWb3t");
+      })();
+    </script>
+  </head>
+  <body id="body">
+    <a href="#" class="mail__link">
+      <button class="mail__button" onclick="toggleModal()">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+    </a>
+    <section id="nav">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="assets/logo2.svg" alt="" />
+        </figure>
+        <ul class="nav__links">
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Project</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link nav__dark--mode click" onclick="darkMode()">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </li>
+        </ul>
+        <figure class="nav__menu click" onclick="openMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </figure>
+        <!-- <div class="menu__backdrop">
+          <figure>
+            <img id="personal-logo" src="assets/logo2.svg" alt="" />
+          </figure>
+          <ul class="nav__links--menu">
+            <li class="nav__link--menu">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >About</a
+              >
+            </li>
+            <li class="nav__link--menu">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Project</a
+              >
+            </li>
+            <li class="nav__link--menu" onclick="toggleModal()">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Contact</a
+              >
+            </li>
+            <li
+              class="nav__link--menu nav__dark--mode click"
+              onclick="darkMode()"
+            >
+              <i class="fa-solid fa-circle-half-stroke"></i>
+            </li>
+          </ul> -->
+        <i
+          class="fa-solid fa-x click nav__close--menu"
+          onclick="openMenu()"
+        ></i>
+        <!-- </div> -->
+      </nav>
+    </section>
+    <section id="header" onmousemove="moveBackground(event)">
+      <header class="header">
+        <div class="header__container">
+          <h1 class="header__title">Hey</h1>
+          <h1 class="header__title text__color">Im Jip.</h1>
+          <p class="header__para">
+            I'm a
+            <span class="text__color">Frontend Software Engineer</span> with a
+            strong passion for building web applications with great user
+            experiences. Here is a bit more
+            <span class="text__color click" onclick="toggleModal()"
+              >About Me.</span
+            >
+          </p>
+          <div class="header__logo--links">
+            <div class="click">
+              <a href="" class="header__social--link background__color"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="click">
+              <a href="" class="header__social--link click background__color"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <div class="click">
+              <a href="" class="header__social--link click background__color"
+                ><i class="fa-solid fa-file-pdf"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- <button class="mail__button">
+        <i class="fa-solid fa-envelope"></i>
+      </button> -->
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+
+      <div class="modal">
+        <div class="modal__left--container">
+          <h3 class="modal__title">Here is a bit about me</h3>
+          <h4 class="modal__sub-title">
+            <b>Frontend Software Engineer</b>
+          </h4>
+          <p class="modal__left--para">
+            Lorem <span class="text__color">ipsum</span> dolor sit amet
+            consectetur adipisicing elit. Aperiam atque nesciunt, incidunt
+            <span class="text__color">deserunt</span>quisquam explicabo harum
+            vitae neque est provident,
+          </p>
+          <p class="modal__left--para">
+            Lorem <span class="text__color">ipsum</span> dolor sit amet
+            consectetur adipisicing elit. Aperiam atque nesciunt, incidunt
+            <span class="text__color">deserunt</span>quisquam explicabo harum
+            vitae neque est provident,
+          </p>
+          <div class="language__list">
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+            <div class="language">
+              <figure class="language__logo">
+                <img
+                  src="/assets/HTML5_logo_and_wordmark.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <div class="language__name">HTML</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__right--container">
+          <h4 class="modal__title text__white">Lets have a chat</h4>
+          <h3 class="modal__sub-title text__white">
+            Im open to new opportunities
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="text__white">Name</label>
+              <input
+                class="modal__from--inp modal__form--name"
+                name="user_name"
+                type="text"
+              />
+            </div>
+            <div class="form__item">
+              <label class="text__white">Email</label>
+              <input
+                class="modal__from--inp modal__form--email"
+                name="user_email"
+                type="email"
+              />
+            </div>
+            <div class="form__item">
+              <label class="text__white">Message</label>
+              <textarea
+                class="modal__from--inp modal__form--text"
+                name="message"
+                id=""
+                rows="5"
+              ></textarea>
+            </div>
+            <button
+              id="modal__form--sbmt"
+              class="modal__form--btn background__color"
+            >
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--succes">
+            Thanks for the message, looking forwards to speaking to you soon.
+          </div>
+          <i
+            class="fa-solid fa-x click modal__close"
+            onclick="toggleModal()"
+          ></i>
+        </div>
+      </div>
+      <img src="/assets/circle.svg" class="shape shape__0" />
+      <img src="/assets/triangle.svg" class="shape shape__1" />
+      <img src="/assets/squiggly.svg" class="shape shape__2" />
+      <img src="/assets/semi circle.svg" class="shape shape__3" />
+      <img src="/assets/circle.svg" class="shape shape__4" />
+      <img src="/assets/circle.svg" class="shape shape__5" />
+      <img src="/assets/squiggly.svg" class="shape shape__6" />
+      <img src="/assets/semi circle.svg" class="shape shape__7" />
+      <img src="/assets/triangle.svg" class="shape shape__8" />
+      <img src="/assets/circle.svg" class="shape shape__9" />
+      <img src="/assets/semi circle.svg" class="shape shape__10" />
+      <img src="/assets/triangle.svg" class="shape shape__11" />
+    </section>
+    <!-- <button class="mail__button">
+      <i class="fa-solid fa-envelope"></i>
+    </button> -->
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="text__color">Projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="/assets/loopit.png"
+                  alt="Project1desc"
+                  class="project__img"
+                />
+                <div class="project__desc">
+                  <h3 class="project__desc--title">Project 1</h3>
+                  <h4 class="project__desc--sub-title">Tech used</h4>
+                  <p class="project__desc--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit optio labore enim sed id ipsum impedit, nihil porro
+                    voluptatibus reiciendis exercitationem dolorum aliquam
+                    explicabo voluptas vero ab, molestias adipisci recusandae?
+                  </p>
+                  <div class="project__desc--links">
+                    <a href="" class="project__desc--link" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+          <figure class="footer__logo">
+            <img src="/assets/logo2.svg" alt="" class="footer__logo--img" />
+          </figure>
+        </a>
+        <div class="footer__social--list">
+          <a
+            href=""
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >Github</a
+          >
+          <a
+            href=""
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a
+            href="mailto:jip.van.sommeren@gmail.com"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            onclick="toggleModal()"
+            >Contact</a
+          >
+          <a
+            href="/assets/Example Resume.pdf"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            download
+            >CV</a
+          >
+        </div>
+        <div class="footer__copyright">Copyright &copy; Jip van Sommeren</div>
+      </div>
+    </footer>
+  </body>
+</html>
